@@ -19,7 +19,7 @@ Create new user
 http://localhost:3000/create-user
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
-as key and value for example,
+as key and value for example:
 name      Grigor,
 surname   Avetisyan,
 email     example@gmail.com,
