@@ -24,7 +24,7 @@ name      Grigor,
 surname   Avetisyan,
 email     example@gmail.com,
 password  qwerty123456,
-Notaion `id for user generated automaticaly`
+NOTES! `id for user generated automaticaly`
 
 Update user by Id
 http://localhost:3000/update-user
