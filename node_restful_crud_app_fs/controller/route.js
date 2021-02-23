@@ -1,5 +1,6 @@
 const http = require('http');
 const url = require('url');
+const baseUrl = '/api/v1/users';
 
 module.exports = http.createServer((req, res) => {
     const controller = require('../controller/controller.js');
@@ -7,13 +8,10 @@ module.exports = http.createServer((req, res) => {
 
     if (req.method === 'GET') {
         switch (reqUrl.pathname) {
-            case '/users':
+            case baseUrl:
                 controller.getUsers(req, res);
                 break;
-            case '/delete-user/':
-                controller.deleteUser(req, res, reqUrl);
-                break;
-            case '/search-user/':
+            case '/api/v1/users/search/':
                 controller.searchUser(req, res, reqUrl);
                 break;
             default:
@@ -21,14 +19,17 @@ module.exports = http.createServer((req, res) => {
         }
     } else if (req.method === 'POST') {
         switch (reqUrl.pathname) {
-            case '/create-user':
+            case '/api/v1/users/add':
                 controller.createUser(req, res);
-                break;
-            case '/update-user':
-                controller.updateUser(req, res);
                 break;
             default:
                 controller.invalidURL(req, res)
         }
+    } else if (reqUrl.pathname === baseUrl + '/delete/' && req.method === 'DELETE') {
+        controller.deleteUser(req, res, reqUrl);
+    } else if (reqUrl.pathname === baseUrl + '/update') {
+        controller.updateUser(req, res);
+    } else {
+        controller.invalidURL(req, res);
     }
 })
