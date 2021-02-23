@@ -2,7 +2,8 @@
 
 FOR EXAMPLE in POSTMAN
 
-// GET METHODS
+ GET METHODS
+ 
 Search user by id
 http://localhost:3000/search-user/?id=2
 
