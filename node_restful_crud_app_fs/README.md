@@ -32,7 +32,7 @@ http://localhost:3000/update-user
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
 as key and value for example
-id `select id which you want change user data` for example `id 1`
+id `select id which user you want change data` for example `id 1`
 name      Armen
 surname   Avetyan
 email     example@gmail.com
