@@ -21,10 +21,10 @@ http://localhost:3000/create-user
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
 as key and value for example:
-name      Grigor,
-surname   Avetisyan,
-email     example@gmail.com,
-password  qwerty123456,
+`name      Grigor`,
+`surname   Avetisyan`,
+`email     example@gmail.com`,
+`password  qwerty123456`,
 NOTES! `id for user generated automaticaly`
 
 Update user by Id
@@ -33,8 +33,8 @@ http://localhost:3000/update-user
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
 as key and value for example
-id `select id which user you want change data` for example `id 1`
-name      Armen,
-surname   Avetyan,
-email     example@gmail.com,
-password  qwerty123456
+`id` `select id which user you want change data` for example `id 1`
+`name      Armen`,
+`surname   Avetyan`,
+`email     example@gmail.com`,
+`password  qwerty123456`
