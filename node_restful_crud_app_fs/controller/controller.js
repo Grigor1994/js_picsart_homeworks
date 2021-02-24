@@ -15,6 +15,7 @@ function createUser(req, res) {
     req.on('end', () => {
         let params = parse(body);
         userService.createUser(params.name, params.surname, params.email, params.password);
+        res.statusCode = 201;
         res.end('User successfully created');
     })
 }
@@ -29,6 +30,7 @@ function updateUser(req, res) {
         console.log(params.id)
         let id = parseInt(params.id, 10)
         userService.updateUserById(id, params.name, params.surname, params.email, params.password);
+        res.statusCode = 200;
         res.end('User successfully updated');
     })
 }
@@ -36,12 +38,14 @@ function updateUser(req, res) {
 function deleteUser(req, res, reqUrl) {
     const id = parseInt(reqUrl.query.id, 10);
     userService.deleteUserById(id);
+    res.statusCode = 202;
     res.end('User successfully deleted');
 }
 
 function searchUser(req, res, reqUrl) {
     const id = parseInt(reqUrl.query.id, 10);
     const user = userService.getUserById(id);
+    res.statusCode = 200;
     res.end(JSON.stringify({user}))
 }
 
