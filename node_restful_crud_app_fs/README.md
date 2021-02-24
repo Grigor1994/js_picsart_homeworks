@@ -5,19 +5,18 @@ FOR EXAMPLE in POSTMAN
  GET METHODS
  
 Search user by id
-http://localhost:3000/search-user/?id=2
-
+localhost:3000/api/v1/users/search/?id=1
 Delete user by id 
-http://localhost:3000/delete-user/?id=1
+localhost:3000/api/v1/users/delete/?id=1
 
 Get all users
-http://localhost:3000/users
+http://localhost:3000/api/v1/users
 
 
 POST METHODS
 
 Create new user 
-http://localhost:3000/create-user
+http://localhost:3000/api/v1/users/create
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
 as key and value for example:
@@ -28,7 +27,7 @@ as key and value for example:
 NOTES! `id for user generated automaticaly`
 
 Update user by Id
-http://localhost:3000/update-user
+http://localhost:3000/api/v1/users/update
 
 select form type in postman 'x-www-form-urlencoded'
 and fill next fields in body
