@@ -5,7 +5,7 @@ FOR EXAMPLE in POSTMAN
  GET METHODS
  
 Search user by id
-localhost:3000/api/v1/users/search/?id=1
+http://localhost:3000/api/v1/users/search/?id=1
 Delete user by id 
 localhost:3000/api/v1/users/delete/?id=1
 
