@@ -9,7 +9,7 @@ function getAllUsers() {
 }
 
 function getUserById(id) {
-    return dao.findUserById(id);
+    return dao.getUserById(id);
 }
 
 function updateUserById(id, data) {

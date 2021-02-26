@@ -12,11 +12,11 @@ function addUser(name, surname, email, password) {
         util.write(DATABASE_PATH, util.convertToJson(cachedData));
     } else {
         user.userData.users.push({id: id, name: name, surname: surname, email: email, password: password});
-        util.write('users.json', util.convertToJson(user.userData))
+        util.write('../users.json', util.convertToJson(user.userData))
     }
 }
 
-function findUserById(id) {
+function getUserById(id) {
     const data = util.read(DATABASE_PATH);
     const index = getIndexById(data, id);
     if (typeof data[index] === 'undefined') return false;
@@ -60,7 +60,7 @@ function getIndexById(array, id) {
 
 module.exports = {
     addUser: addUser,
-    findUserById: findUserById,
+    getUserById: getUserById,
     getAllUsers: getAllUsers,
     deleteUserById: deleteUserById,
     updateUserById: updateUserById,

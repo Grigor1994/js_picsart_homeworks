@@ -32,7 +32,7 @@ app.get(`${BASE_URL}users/:id`, (req, res) => {
 
 // POST METHOD
 // create user
-app.post(`${BASE_URL}users/add`, (req, res) => {
+app.post(`${BASE_URL}users`, (req, res) => {
     let name = req.body.name;
     let surname = req.body.surname;
     let email = req.body.email;
@@ -44,7 +44,7 @@ app.post(`${BASE_URL}users/add`, (req, res) => {
 
 // PUT METHOD
 // update user
-app.put(`${BASE_URL}users/update/:id`, (req, res) => {
+app.put(`${BASE_URL}users/:id`, (req, res) => {
     let id = Number(req.params.id);
     if (userService.getUserById(id)) {
         userService.updateUserById(id, req.body);
@@ -56,7 +56,7 @@ app.put(`${BASE_URL}users/update/:id`, (req, res) => {
 
 // DELETE METHOD
 // delete user by id
-app.delete(`${BASE_URL}users/delete/:id`, (req, res) => {
+app.delete(`${BASE_URL}users/:id`, (req, res) => {
     userService.deleteUserById(Number(req.params.id))
     res.status(200).send('User successfully removed');
 });
