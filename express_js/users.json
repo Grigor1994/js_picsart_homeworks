@@ -1,0 +1,44 @@
+[
+  {
+    "id": 2,
+    "name": "Gegham",
+    "surname": "Hakobyan",
+    "email": "grigor.avetisyan@hotmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 3,
+    "name": "Asatur",
+    "surname": "Aramyan",
+    "email": "example@gmail.com",
+    "password": "password"
+  },
+  {
+    "id": 4,
+    "name": "Gegham",
+    "surname": "Hakobyan",
+    "email": "grigor.avetisyan@hotmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 5,
+    "name": "Sargis",
+    "surname": "Hakobyan",
+    "email": "grigor.avetisyan@hotmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 6,
+    "name": "Gegham",
+    "surname": "Hakobyan",
+    "email": "grigor.avetisyan@hotmail.com",
+    "password": "123456"
+  },
+  {
+    "id": 5,
+    "name": "Gurgen",
+    "surname": "Antonyan",
+    "email": "example@gmail.com",
+    "password": "password"
+  }
+]

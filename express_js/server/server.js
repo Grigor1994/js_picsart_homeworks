@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const userService = require('../service/user-service');
-const util = require('../util/util');
+const util = require('../util/util.js');
 
 const port = process.env.PORT || 3000;
 const BASE_URL = '/api/v1/';

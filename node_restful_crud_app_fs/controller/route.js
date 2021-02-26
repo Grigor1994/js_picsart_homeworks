@@ -3,7 +3,7 @@ const url = require('url');
 const baseUrl = '/api/v1/users';
 
 module.exports = http.createServer((req, res) => {
-    const controller = require('./controller.js');
+    const controller = require('../controller/controller.js');
     const reqUrl = url.parse(req.url, true);
 
     if (req.method === 'GET') {

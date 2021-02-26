@@ -1,6 +1,6 @@
 const util = require('../util/util')
 const user = require('../model/user');
-const DATABASE_PATH = './users.json';
+const DATABASE_PATH = '../users.json';
 
 
 function addUser(name, surname, email, password) {
@@ -28,7 +28,7 @@ function getAllUsers() {
     return util.read(DATABASE_PATH);
 }
 
-function updateUserById(id,data){
+function updateUserById(id, data) {
     const arr = util.read(DATABASE_PATH);
     for (let arrElement of arr) {
         if (arrElement.id === id) {
@@ -38,7 +38,7 @@ function updateUserById(id,data){
             break;
         }
     }
-    util.write('users.json',util.convertToJson(arr))
+    util.write('../users.json', util.convertToJson(arr))
 }
 
 function deleteUserById(id) {
@@ -47,6 +47,7 @@ function deleteUserById(id) {
     const convertedData = util.convertToJson(cachedData);
     util.write(DATABASE_PATH, convertedData);
 }
+
 function getIndexById(array, id) {
     let index = -1;
     for (let key of array) {
